@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PromptCartoon – AI Cartoon Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="glass-nav">
+
+<div class="logo">
+Prompt<span>Cartoon</span>
+</div>
+
+<div class="nav-links">
+
+<button onclick="nav('home')">Home</button>
+<button onclick="nav('styles')">Styles</button>
+<button onclick="nav('generator')">Generator</button>
+
+</div>
+
+</nav>
+
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="pane active">
+
+<div class="hero-content">
+
+<h1>
+AI <span>Cartoon Generator</span>
+</h1>
+
+<p>
+Generate cartoon images using custom LoRA models and prompt tokens.
+</p>
+
+<button class="btn-primary" onclick="nav('styles')">
+Choose Style
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= STYLE SELECTION ================= -->
+
+<section id="styles" class="pane">
+
+<h2>Select Cartoon Style</h2>
+
+<div class="style-grid">
+
+
+<!-- Adventure Time -->
+
+<div class="style-card" onclick="selectStyle('Adventure Time')">
+<img src="styles/adventure_time.jpg" alt="Adventure Time style" loading="lazy">
+<h3>Adventure Time</h3>
+<p class="model-desc">Bright fantasy cartoon with magical landscapes</p>
+</div>
+
+
+
+<!-- Avatar -->
+
+<div class="style-card" onclick="selectStyle('Avatar')">
+<img src="styles/avatar.jpg" alt="Avatar style" loading="lazy">
+<h3>Avatar: The Last Airbender</h3>
+<p class="model-desc">Anime inspired elemental action style</p>
+</div>
+
+
+
+<!-- Powerpuff -->
+
+<div class="style-card" onclick="selectStyle('Powerpuff Girls')">
+<img src="styles/powerpuff.jpg" alt="Powerpuff Girls style" loading="lazy">
+<h3>Powerpuff Girls</h3>
+<p class="model-desc">Cute superhero cartoon style</p>
+</div>
+
+
+
+<!-- Samurai Jack -->
+
+<div class="style-card" onclick="selectStyle('Samurai Jack')">
+<img src="styles/samurai_jack.jpg" alt="Samurai Jack style" loading="lazy">
+<h3>Samurai Jack</h3>
+<p class="model-desc">Minimal cinematic action style</p>
+</div>
+
+
+
+<!-- Steven Universe -->
+
+<div class="style-card" onclick="selectStyle('Steven Universe')">
+<img src="styles/steven_universe.jpg" alt="Steven Universe style" loading="lazy">
+<h3>Steven Universe</h3>
+<p class="model-desc">Soft pastel cartoon with emotional characters</p>
+</div>
+
+
+
+<!-- OTGW -->
+
+<div class="style-card" onclick="selectStyle('Over The Garden Wall')">
+<img src="styles/garden_wall.jpg" alt="Over the Garden Wall style" loading="lazy">
+<h3>Over The Garden Wall</h3>
+<p class="model-desc">Dark fairy tale cartoon forest</p>
+</div>
+
+
+
+<!-- Dexter -->
+
+<div class="style-card" onclick="selectStyle('Dexter Lab')">
+<img src="styles/dexter.jpg" alt="Dexter Laboratory style" loading="lazy">
+<h3>Dexter's Laboratory</h3>
+<p class="model-desc">Retro science cartoon style</p>
+</div>
+
+
+
+<!-- Bugs Bunny -->
+
+<div class="style-card" onclick="selectStyle('Bugs Bunny')">
+<img src="styles/bugs.jpg" alt="Bugs Bunny style" loading="lazy">
+<h3>Bugs Bunny</h3>
+<p class="model-desc">Classic slapstick cartoon</p>
+</div>
+
+
+
+<!-- Peanuts -->
+
+<div class="style-card" onclick="selectStyle('Peanuts')">
+<img src="styles/peanuts.jpg" alt="Peanuts comic style" loading="lazy">
+<h3>Peanuts Comic</h3>
+<p class="model-desc">Minimal comic strip style</p>
+</div>
+
+
+
+<!-- Garfield -->
+
+<div class="style-card" onclick="selectStyle('Garfield')">
+<img src="styles/garfield.jpg" alt="Garfield style" loading="lazy">
+<h3>Garfield</h3>
+<p class="model-desc">Comic strip cartoon humor</p>
+</div>
+
+
+
+<!-- Looney Tunes -->
+
+<div class="style-card" onclick="selectStyle('Looney Tunes')">
+<img src="styles/looney.jpg" alt="Looney Tunes style" loading="lazy">
+<h3>Looney Tunes</h3>
+<p class="model-desc">Retro exaggerated animation</p>
+</div>
+
+
+
+<!-- Alice -->
+
+<div class="style-card" onclick="selectStyle('Alice Forever After')">
+<img src="styles/alice.jpg" alt="Alice fantasy style" loading="lazy">
+<h3>Alice Forever After</h3>
+<p class="model-desc">Dreamy surreal fantasy cartoon</p>
+</div>
+
+
+
+<!-- PB Monkey -->
+
+<div class="style-card" onclick="selectStyle('PB Monkey Jelly')">
+<img src="styles/monkey.jpg" alt="PB Monkey Jelly style" loading="lazy">
+<h3>PB Monkey Jelly</h3>
+<p class="model-desc">Funny jungle adventure cartoon</p>
+</div>
+
+
+
+<!-- Donald Marvel -->
+
+<div class="style-card" onclick="selectStyle('Donald Marvel')">
+<img src="styles/donald.jpg" alt="Donald Marvel style" loading="lazy">
+<h3>Donald Marvel</h3>
+<p class="model-desc">Superhero comic cartoon</p>
+</div>
+
+
+
+<!-- Wrestle -->
+
+<div class="style-card" onclick="selectStyle('Wrestle Heist')">
+<img src="styles/wrestle.jpg" alt="Wrestle Heist style" loading="lazy">
+<h3>Wrestle Heist</h3>
+<p class="model-desc">Dynamic wrestling cartoon</p>
+</div>
+
+
+
+<!-- Classic -->
+
+<div class="style-card" onclick="selectStyle('Cartoon Classic')">
+<img src="styles/classic.jpg" alt="Classic cartoon style" loading="lazy">
+<h3>Cartoon Classic</h3>
+<p class="model-desc">General cartoon generator</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= GENERATOR ================= -->
+
+<section id="generator" class="pane">
+
+<h2 id="current-style-title">
+Generator
+</h2>
+
+
+<div class="gen-container">
+
+
+<!-- LEFT PREVIEW -->
+
+<div class="gen-sidebar glass-card">
+
+<img id="style-preview"
+src="styles/adventure_time.jpg"
+alt="Selected style preview">
+
+</div>
+
+
+
+<!-- RIGHT PANEL -->
+
+<div class="gen-main glass-card">
+
+<label for="prompt-input">Prompt</label>
+
+<textarea
+id="prompt-input"
+placeholder="Describe your cartoon scene..."
+></textarea>
+
+
+
+<div class="prompt-controls">
+
+<button class="btn-small" onclick="randomPrompt()">
+Random Prompt
+</button>
+
+<button class="btn-small" onclick="clearPrompt()">
+Clear
+</button>
+
+</div>
+
+
+
+<label>Prompt Tokens</label>
+
+<div id="suggestion-tags" class="tag-cloud"></div>
+
+
+
+<button class="btn-primary full-width" onclick="generateImage()">
+Generate Cartoon
+</button>
+
+
+
+<!-- RESULT OUTPUT -->
+
+<div class="result-container">
+
+<div id="loader" class="loader"></div>
+
+<img id="result-image" alt="Generated cartoon result">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
