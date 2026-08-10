@@ -1,55 +1,32 @@
 # Project S8 — Generative AI Style Learning & LoRA Training
 
+> An end-to-end local generative AI experimentation pipeline for learning visual styles with Stable Diffusion and parameter-efficient LoRA fine-tuning.
+
 ## Overview
 
-## What I Built
+Project S8 is a generative AI research and engineering project focused on building, training, evaluating, and deploying lightweight LoRA adapters for stylized image generation.
 
-## Key Objectives
+Instead of treating image generation as only a prompt-to-image task, the project explores the complete machine-learning workflow:
 
-## System Architecture
-
-## End-to-End Pipeline
-
-## Dataset Engineering
-
-## Dataset Statistics
-
-## Captioning & Metadata
-
-## Model Architecture
-
-## LoRA Fine-Tuning
-
-## Training Configuration
-
-## Experiments
-
-## Checkpoint Evaluation
-
-## Results
-
-## Before / After Examples
-
-## Inference
-
-## Project Structure
-
-## Installation
-
-## Usage
-
-## Reproducing the Experiment
-
-## Hardware / Environment
-
-## Engineering Challenges
-
-## Solutions
-
-## Limitations
-
-## Future Improvements
-
-## Technical Stack
-
-## License
+```text
+Dataset Collection
+        ↓
+Dataset Organization
+        ↓
+Image Preparation
+        ↓
+Caption / Metadata Preparation
+        ↓
+Dataset Validation
+        ↓
+Training Configuration
+        ↓
+LoRA Fine-Tuning
+        ↓
+Checkpoint Generation
+        ↓
+Checkpoint Evaluation
+        ↓
+Local Inference
+        ↓
+Visual Evaluation
