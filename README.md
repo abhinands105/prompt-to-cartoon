@@ -2,44 +2,54 @@
 
 ## Overview
 
-Project S8 is a generative-AI experimentation and training framework
-for learning visual styles from curated datasets using diffusion models
-and parameter-efficient LoRA fine-tuning.
+## What I Built
 
-The project explores:
+## Key Objectives
 
-- Dataset engineering
-- Image preprocessing
-- Caption preparation
-- Stable Diffusion fine-tuning
-- LoRA training
-- Style-specific model development
-- Model evaluation
-- Local inference
-- Generation workflows
+## System Architecture
 
-## Pipeline
+## End-to-End Pipeline
 
-Dataset Collection
-        ↓
-Data Cleaning
-        ↓
-Duplicate Removal
-        ↓
-Image Preparation
-        ↓
-Caption Generation
-        ↓
-Dataset Validation
-        ↓
-LoRA Configuration
-        ↓
-Stable Diffusion Training
-        ↓
-Checkpoint Evaluation
-        ↓
-Best Model Selection
-        ↓
-Inference
-        ↓
-Visual Evaluation
+## Dataset Engineering
+
+## Dataset Statistics
+
+## Captioning & Metadata
+
+## Model Architecture
+
+## LoRA Fine-Tuning
+
+## Training Configuration
+
+## Experiments
+
+## Checkpoint Evaluation
+
+## Results
+
+## Before / After Examples
+
+## Inference
+
+## Project Structure
+
+## Installation
+
+## Usage
+
+## Reproducing the Experiment
+
+## Hardware / Environment
+
+## Engineering Challenges
+
+## Solutions
+
+## Limitations
+
+## Future Improvements
+
+## Technical Stack
+
+## License
