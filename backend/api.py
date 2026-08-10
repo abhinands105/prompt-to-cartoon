@@ -3,7 +3,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-from generator import generate_cartoon
+from backend.generator import generate_cartoon
 
 app = FastAPI()
 
